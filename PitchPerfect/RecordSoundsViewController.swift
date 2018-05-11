@@ -21,6 +21,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         stopRecordingButton.isEnabled = false
+        stopRecordingButton.imageView?.contentMode = .scaleAspectFit
     }
     
     private func configureUI(_ recording: Bool) {

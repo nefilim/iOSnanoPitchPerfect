@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,21 +19,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCJ-Vx-UwF">
-                                <rect key="frame" x="110" y="288" width="155" height="155"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCJ-Vx-UwF">
+                                <rect key="frame" x="104" y="272" width="167" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eCJ-Vx-UwF" secondAttribute="height" multiplier="1:1" id="q5S-vW-NIi"/>
+                                </constraints>
                                 <state key="normal" image="RecordButton"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w3d-Cc-EbF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwG-P9-5Lc">
-                                <rect key="frame" x="134.5" y="451" width="106.5" height="21"/>
+                                <rect key="frame" x="134.5" y="447" width="106.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Nk-Ux-hGw">
-                                <rect key="frame" x="156" y="490" width="64" height="64"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Nk-Ux-hGw">
+                                <rect key="frame" x="156" y="486" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="8os-9o-T49"/>
                                     <constraint firstAttribute="width" constant="64" id="sFc-Dc-qVu"/>
@@ -47,7 +51,8 @@
                         <constraints>
                             <constraint firstItem="eCJ-Vx-UwF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="72c-yh-hhU"/>
                             <constraint firstItem="8Nk-Ux-hGw" firstAttribute="top" secondItem="nwG-P9-5Lc" secondAttribute="bottom" constant="18" id="9z7-Jb-p4b"/>
-                            <constraint firstItem="eCJ-Vx-UwF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="D4r-XP-Zyq"/>
+                            <constraint firstItem="eCJ-Vx-UwF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-10" id="D4r-XP-Zyq"/>
+                            <constraint firstItem="eCJ-Vx-UwF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="KbX-bu-WJg"/>
                             <constraint firstItem="nwG-P9-5Lc" firstAttribute="centerX" secondItem="eCJ-Vx-UwF" secondAttribute="centerX" id="UsC-tM-RRj"/>
                             <constraint firstItem="8Nk-Ux-hGw" firstAttribute="centerX" secondItem="nwG-P9-5Lc" secondAttribute="centerX" id="w4L-Sg-c1S"/>
                             <constraint firstItem="nwG-P9-5Lc" firstAttribute="top" secondItem="eCJ-Vx-UwF" secondAttribute="bottom" constant="8" id="yYM-n8-u3D"/>
